@@ -1,0 +1,176 @@
+:root {
+    --first-color: #1B065E;
+    --second-color: #8075FF;
+    --third-color: #5147c4;
+    --fourth-color: #F3CA40;
+    --fifth-color: #F19846;
+    --text-color: #2B2D42;
+    --input-color: #ADADFF;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--second-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--third-color);
+    box-shadow: 0 0 10px 10px var(--third-color);
+}
+
+body, html {
+    scroll-snap-type: y proximity;
+}
+
+header {
+    width: 100%;
+    height: 65px;
+    background: var(--first-color);
+    padding: 5px 50px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 10px 10px var(--first-color);
+    z-index: 99999;
+}
+
+header .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    color: var(--second-color);
+}
+
+header nav {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+a {
+    color: var(--second-color);
+    transition: 0.2s ease-out;
+}
+
+a:hover {
+    color: var(--third-color);
+}
+
+
+
+
+
+.contactme {
+    background: linear-gradient(var(--second-color), var(--third-color));
+}
+
+.contactme .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    width: 100%;
+    height: calc(100vh - 65px);
+    font-size: 22px;
+    scroll-snap-align: end;
+}
+
+.contactme .title {
+    margin-bottom: 5vh;
+}
+
+.contactme .title h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contactme .title hr {
+    margin-bottom: 10px;
+    border: 1px solid var(--text-color);
+}
+
+.contactme .form {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px 50px;
+    background: linear-gradient(135deg, var(--second-color), var(--third-color));
+    border-radius: 10px;
+    box-shadow: 0 0 30px 5px var(--third-color);
+}
+
+.contactme form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.contactme label {
+    margin-bottom: 5px;
+}
+
+.contactme input {
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+::placeholder {
+    color: var(--text-color);
+}
+
+.contactme input[name="name"], input[name="email"] {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 17px;
+    background: var(--input-color);
+    color: var(--text-color);
+    border: 1px solid var(--first-color);
+}
+
+.contactme input[name="name"]:focus, input[name="email"]:focus {
+    outline: 0;
+    border: 1px solid var(--fifth-color);
+}
+
+.contactme textarea {
+    height: 100px;
+    margin-bottom: 50px;
+    padding: 5px 10px;
+    font-size: 17px;
+    background: var(--input-color);
+    color: var(--text-color);
+    border: 1px solid var(--first-color);
+}
+
+.contactme textarea:focus {
+    outline: 0;
+    border: 1px solid var(--fifth-color);
+}
+
+.contactme input[type="submit"] {
+    height: 50px;
+    width: 300px;
+    font-size: 22px;
+    background: var(--fourth-color);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.contactme input[type="submit"]:hover {
+    background: var(--fifth-color);
+}
